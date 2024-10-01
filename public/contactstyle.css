@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white;
+    padding: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Keeps navbar above everything */
+    position: relative;
+}
+
+/* Main Section */
+.main-section {
+    position: relative;
+    height: 100vh; /* Full height to cover the entire viewport */
+    overflow: hidden;
+}
+
+/* Background Video */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures video stays behind content */
+    overflow: hidden;
+}
+
+#bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the body section */
+}
+
+/* Main Section Content */
+.video-image-container {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    color: white; /* Text color for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px; /* Padding for content spacing */
+    text-align: left; /* Text alignment */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-image-container {
+        flex-direction: column; /* Stacks content vertically on small screens */
+        margin-left: 0; /* Removes left margin on small screens */
+    }
+
+    .video-container {
+        width: 100%; /* Full width for video container on small screens */
+    }
+
+    .text-container {
+        margin-left: 0; /* Removes left margin on small screens */
+        max-width: none; /* Removes max width restriction on small screens */
+    }
+}

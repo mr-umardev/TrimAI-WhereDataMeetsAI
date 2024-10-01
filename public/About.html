@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TrimItAI: AI Text Summarizer</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            color: white; /* Set default text color to white */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: relative;
+            z-index: 10;
+            background-color: white; /* Ensure navbar appears above the video */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+        }
+
+        .navbar-menu a {
+            list-style: none;
+            display: flex; /* Make it a flex container */
+            gap: 15px; /* Adjust this value for spacing */ /* Navbar links color */
+        }
+
+        /* Background video styles */
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1; /* Ensure video is behind content */
+        }
+
+        /* Main section styles */
+        .main-section {
+            position: relative;
+            z-index: 2; /* Ensure content appears above the video */
+            padding: 20px;
+        }
+
+        .cta-section {
+            margin-top: 20px;
+            text-align: center; /* Center align text in CTA section */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="https://i.pinimg.com/736x/45/07/43/45074362550d55ba2c49f7c844bcf5a7--wall-e.jpg" alt="Logo" class="logo">
+                <h1>TrimItAI✂️</h1>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="C:\Users\UMAR\Desktop\Projects\TrimAI\public\images\Neon Rounded Purple lines Abstract Gradient Background Animation __ Free Version.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="content">
+            <h2>Harnessing the power of AI with TrimAI</h2>
+        <p>🌟 Welcome to TrimAI: Your AI-Powered Text Summarizer! 🌟</p>
+            <p>🚀 Overview: Dive into the world of TrimAI, where cutting-edge technology meets user-friendly design! Our platform harnesses the power of AI to transform lengthy texts into concise summaries, making information easier to digest.</p>
+            <ol>
+            <p>✨ Key Features:</p>
+            
+            <p>🎨 Intuitive Interface: Enjoy a sleek, user-friendly interface built with JavaScript! Just type or paste your text, and watch as we work our magic to provide you with a neat summary.</p>
+            
+            <p>⚡ API Integration with Postman: Our smooth backend operations rely on Postman API integration, ensuring swift communication between the front end and our summarization engine. Every request is handled with speed and precision!</p>
+            
+            <p>🤖 Advanced Summarization Model: Experience the power of Hugging Face’s API! Our state-of-the-art models are trained on extensive datasets, giving you high-quality, context-aware summaries that capture the essence of any text input—from articles and reports to academic papers.</p>
+            
+            <p>🌐 Seamless Deployment on Replit: TrimAI is hosted on Replit, allowing for rapid deployment and easy updates. This means we can keep improving your summarization experience without any hassle!</p>
+            </ol>
+        </div>
+        
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

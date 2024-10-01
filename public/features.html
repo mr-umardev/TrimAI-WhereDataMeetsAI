@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TrimItAI: AI Text Summarizer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start; /* Align everything to the left */
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            height: 60px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Logo */
+        .navbar-logo img {
+            max-height: 50px; /* Adjust image height */
+            margin-right: 15px; /* Slight margin between image and text */
+        }
+
+        /* TrimAI Heading */
+        .navbar-heading {
+            font-size: 24px; /* Make this slightly bigger than the navbar links */
+            font-weight: 700; /* Bold font for emphasis */
+            color: black;
+            margin-right: 30px; /* Space between heading and navigation links */
+        }
+
+        /* Navbar Menu */
+        .navbar-menu {
+            list-style: none;
+            display: flex; /* Make it a flex container */
+            gap: 15px; /* Adjust this value for spacing */
+        }
+
+        .navbar-menu li {
+            margin-left: 15px; /* Slight spacing between menu items */
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 15px;
+        }
+
+        .navbar-menu a:hover {
+            color: #FF5733;
+        }
+
+        /* Rest of the page styling */
+        .main-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        video.bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            max-width: 800px;
+        }
+
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1;">
+        <source src="C:\Users\UMAR\Desktop\Projects\TrimAI\public\images\Neon Rounded Purple lines Abstract Gradient Background Animation __ Free Version.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <!-- Image Logo in the Navbar -->
+        <div class="navbar-logo">
+            <img src="https://i.pinimg.com/736x/45/07/43/45074362550d55ba2c49f7c844bcf5a7--wall-e.jpg" alt="Logo"> <!-- Image as logo -->
+        </div>
+
+        <!-- TrimAI Heading next to logo -->
+        <h1 class="navbar-heading">TrimAI✂️</h1>
+
+        <!-- Navigation Links -->
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="cta-text">
+                <section class="features-section" style="padding: 50px 0; text-align: center;">
+                    <h2 style="color: white;">Key Features</h2>
+                    <div class="features-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 20px;">
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3 class="feature-title">Fast and Efficient</h3>
+                            <p class="feature-description">Summarize lengthy texts in seconds, saving you valuable time.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤖</div>
+                            <h3 class="feature-title">AI-Powered</h3>
+                            <p class="feature-description">Utilizing cutting-edge AI technology to deliver precise summaries.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3 class="feature-title">Fast and Efficient</h3>
+                            <p class="feature-description">Summarize lengthy texts in seconds, saving you valuable time.</p>
+                        </div>
+                    </div>
+
+                    <!-- New Row of Features -->
+                    <div class="features-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 20px;">
+                        <div class="feature-card">
+                            <div class="feature-icon">⚙️</div>
+                            <h3 class="feature-title">Customizable</h3>
+                            <p class="feature-description">Easily customize the summarization settings to fit your needs.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌐</div>
+                            <h3 class="feature-title">Multi-language Support</h3>
+                            <p class="feature-description">Summarize texts in multiple languages to cater to global users.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔒</div>
+                            <h3 class="feature-title">Privacy-Focused</h3>
+                            <p class="feature-description">We prioritize your privacy with secure summarization.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

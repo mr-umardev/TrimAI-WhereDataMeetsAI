@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video stays behind the content */
+    object-fit: cover;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white; /* White background for the navbar */
+    padding: 10px;
+    color: black; /* Black text for the navbar content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    position: relative;
+    z-index: 100; /* Ensure the navbar stays above the video */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo h1 {
+    margin-left: 10px;
+    color: black; /* Change the logo text color to black */
+}
+
+.logo {
+    height: 60px; /* Increased height for the logo */
+    width: auto;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu li a {
+    color: black; /* Change menu item color to black */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #ff7f50; /* Coral hover color */
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu.active {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Main Section Styles */
+.main-section {
+    padding: 40px 20px;
+    color: #fff; /* White text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 80px); /* Centering vertically */
+}
+
+.content {
+    max-width: 600px; /* Restrict content width */
+    text-align: center; /* Ensure the text is centered */
+    margin: 0 auto; /* Center content horizontally */
+}
+
+.main-section h1 {
+    color: #ffffff; /* White text for the heading */
+}
+
+.main-section p {
+    color: #cccccc; /* Light grey text for paragraphs */
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: black;
+    padding: 40px;
+}
+
+.cta-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-text {
+    max-width: 400px;
+}
+
+.cta-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .cta-content {
+        flex-direction: column;
+    }
+
+    .cta-image {
+        max-width: 100%;
+        height: auto;
+    }
+}

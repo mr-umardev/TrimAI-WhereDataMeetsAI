@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TrimItAI: AI Text Summarizer</title>
+    <link rel="stylesheet" href="stylesheet.css">  
+
+    <style>
+        /* Add CSS styles to brighten the video */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(1.4) contrast(1.2); /* Increases brightness and contrast */
+        }
+
+        /* Optional overlay to add more brightness */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2); /* A light overlay to further brighten the video */
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: white; /* Change to white background */
+            padding: 10px 20px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 15px; /* Spacing between links */
+        }
+
+        .navbar-menu li a {
+            text-decoration: none;  /* Remove underline */
+            color: black;          /* Change link color to black */
+            padding: 10px;        /* Add some padding */
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+
+        .navbar-menu li a:hover {
+            color: #ffcc00;       /* Change color on hover */
+        }
+
+        /* Other page styling as per the original code */
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="C:\Users\UMAR\Desktop\Projects\TrimAI\public\images\Neon Rounded Purple lines Abstract Gradient Background Animation __ Free Version.mp4" type="video/mp4"> <!-- Replace with your video file -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Light overlay to further brighten the background -->
+    <div class="overlay"></div>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="https://i.pinimg.com/736x/45/07/43/45074362550d55ba2c49f7c844bcf5a7--wall-e.jpg" alt="Logo" class="logo">
+                <h1 style="color: black;">TrimItAI✂️</h1> <!-- Changed text color to black -->
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="content">
+            <h1>Welcome to TrimItAI ✂️ Your AI-Powered Text Summarizer</h1>
+            <p>
+                Welcome to TrimItAI – your go-to tool for cutting through the clutter! 🚀 Say goodbye to lengthy reads and hello to quick, concise summaries. 💡 Powered by AI, TrimItAI extracts key insights from articles, reports, and more, delivering easy-to-digest summaries in just seconds ⏱️.
+            </p>
+            <p>
+                Just paste your text into the box below 📝 and hit the "Blend!" button! 🚀 Let TrimItAI work its magic and transform your lengthy content into quick, concise summaries in no time! ✂️✨.
+            </p>
+        </div>
+
+        <!-- Text Summarizer Section -->
+        <div class="container">
+            <div class="text-box">
+                <textarea id="text_to_summarize" name="text_to_summarize" placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)" maxlength="100000"></textarea>
+                <button id="submit-button" class="submit-button">
+                    <span class="submit-button-text">Blend! 🥤</span>
+                </button>
+            </div>
+            <div class="text-box">
+                <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here" readonly></textarea>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 style="color: black;">Get started with TrimItAI today!</h2>
+                    <p style="color: black;">Effortlessly summarize text and save time. 🚀</p>
+                </div>
+                <img src="https://th.bing.com/th/id/R.dbc239853d049ae9b04bbb0252b23037?rik=HDw1tk%2fwugweFg&riu=http%3a%2f%2ficongal.com%2fgallery%2fimage%2f2042%2frobot_eve.png&ehk=BhPFXGnH6BzM8mo%2fDw083d8C9CHNpuEPyti8aOGe%2bew%3d&risl=&pid=ImgRaw&r=0" alt="AI Image" class="cta-image">
+            </div>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

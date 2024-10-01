@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TrimItAI: AI Text Summarizer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      height: 60px; /* Consistent navbar height */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Navbar Logo */
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-logo img {
+      max-height: 50px; /* Maintain image height */
+      margin-right: 15px; /* Add margin between logo and heading */
+    }
+
+    /* Navbar Heading (TrimItAI) */
+    .navbar h1 {
+      font-size: 24px; /* Slightly larger font size */
+      font-weight: 700; /* Bold for emphasis */
+      margin: 0;
+      padding-left: 10px;
+      color: black;
+    }
+
+    /* Navbar Menu Styling */
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      margin-left: 50px;
+      padding: 0;
+    }
+
+    .navbar-menu li {
+      margin-left: 20px;
+    }
+
+    .navbar-menu li a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px; /* Slightly smaller font size for links */
+      font-weight: 500;
+      padding: 10px 15px;
+    }
+
+    .navbar-menu li a:hover {
+      color: #FF5733; /* Hover effect */
+    }
+
+    /* Main Section Styling */
+    .main-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      padding: 20px 40px;
+      max-width: 800px;
+    }
+
+    .added-image {
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* Social Media Links Styling */
+    .social-media-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-media-links a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .social-media-links img {
+      width: 48px;
+      height: 48px;
+      margin-right: 8px;
+    }
+
+    .social-media-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <img src="https://i.pinimg.com/736x/45/07/43/45074362550d55ba2c49f7c844bcf5a7--wall-e.jpg" alt="Logo" class="logo">
+        <h1>TrimItAI✂️</h1>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Section (with Background Video) -->
+  <section class="main-section">
+    <video autoplay muted loop class="bg-video">
+      <source src="C:\Users\UMAR\Desktop\Projects\TrimAI\public\images\[No-Copyright Music] Victory _ Background Music for Video by MaxKoMusic - Free Download.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="overlay"></div>
+
+    <img src="C:\Users\UMAR\Desktop\Projects\TrimAI\public\images\New.png" alt="Description of Image" class="added-image">
+
+    <div class="content">
+      <h2>Meet the Developer 👨‍💻</h2>
+      <p>Hey there! 👋 I'm Mohammed R Umar Farooq, a passionate third-year student at BMS College of Engineering, on a journey to enhance my skills in the tech industry. 🚀 My focus is on mastering Data Structures 📊 to build efficient algorithms and utilizing React.js ⚛️ to create dynamic user interfaces that enhance user experience. I enjoy crafting beautiful and responsive designs with Tailwind CSS 🎨, which allows me to bring my creative vision to life.
+        With a strong foundation in C++ 💻, I hone my programming principles and tackle complex problems, while JavaScript 🌐 empowers me to develop interactive web applications that engage users. I’m super excited to leverage these skills and contribute to innovative solutions that make a difference in the future!</p>
+      
+      <!-- Social Media Links -->
+      <div class="social-media-links">
+        <a href="https://www.linkedin.com/in/mohammed-r-umar-farooq/" target="_blank">
+          <img src="https://th.bing.com/th/id/R.21fba12531ac377e1642a01921db9fbd?rik=ErbH90Kfy3L6tg&riu=http%3a%2f%2fencomium.ng%2fwp-content%2fuploads%2f2016%2f01%2fLinkedIn-Logo.png&ehk=qo9l10kLERwTTr5WEWyHeVR%2bKIWh4CchVBnnAxyz3ic%3d&risl=&pid=ImgRaw&r=0" alt="LinkedIn">
+          LinkedIn
+        </a>
+        <a href="https://github.com/mr-umardev" target="_blank">
+          <img src="https://th.bing.com/th/id/OIP.yCdM9TdzWp6HRCgCJ9Ow-AAAAA?w=336&h=336&rs=1&pid=ImgDetMain" alt="LeetCode">
+          GitHub
+        </a>
+        <a href="https://instagram.com/" target="_blank">
+          <img src="https://clipartcraft.com/images/instagram-logo-transparent-background-2.png" alt="Instagram">
+          Instagram
+        </a>
+      </div>
+    </div>
+    
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
